@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Gilda+Display|Red+Hat+Display:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css"> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Harry Potta</title>
+</head>
+
+<body>
+
+  <ul id="menu" class="nav menu justify-content-center">
+
+    <li class="nav-item menu-item">
+      <a class="nav-link" href="#">Books and Movies</a>
+    </li>
+
+    <li class="nav-item menu-item">
+      <a class="nav-link" href="#characters">Characters</a>
+    </li>
+
+    <li class="nav-item menu-item">
+      <a class="nav-link" href="#sortingHat">Sorting hat</a>
+    </li>
+
+    <li class="nav-item menu-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+
+  </ul>
+
+  <div class="starting-page d-flex justify-content-center align-items-center flex-column">
+    <div class="starting-page__logo">
+        <img src = "./images/Harry_Potter_-_Logo.png">
+    </div>
+  </div>
+
+  <div class="carousel-wrapper">
+    <div class="bookList-carousel" id="books">
+
+    <div class="carousel__button--next"></div>
+    <div class="carousel__button--prev"></div>
+    </div>
+  </div>
+
+  <div id="characters" class="characters-page d-flex flex-column justify-content-center align-items-center">
+    <h1 id="charactersTitle">Characters</h1>
+
+    <div class="d-flex w-75 btn-group justify-content-center">
+      <button id="gryffindor" class="house-button house-button__gryffindor"></button>
+      <button id="hufflepuff" class="house-button house-button__hufflepuff"></button>
+      <button id="ravenclaw" class="house-button house-button__ravenclaw"></button>
+      <button id="slytherin" class="house-button house-button__slytherin"></button>
+    </div>
+
+    <div class="align-items-center flex-column character-list characters-list__gryffindor d-none">
+      <div class="d-flex justify-content-center w-75 flex-wrap characters-list__gryffindor-cards"></div>
+    </div>
+    
+    <div class="align-items-center flex-column character-list characters-list__hufflepuff d-none">
+      <div class="d-flex justify-content-center w-75 flex-wrap characters-list__hufflepuff-cards"></div>
+    </div>
+
+    <div class="align-items-center flex-column character-list characters-list__ravenclaw d-none">
+      <div class="d-flex justify-content-center w-75 flex-wrap characters-list__ravenclaw-cards"></div>
+    </div>
+
+    <div class="align-items-center flex-column character-list characters-list__slytherin d-none">
+      <div class="d-flex justify-content-center w-75 flex-wrap characters-list__slytherin-cards"></div>
+    </div>
+  </div>
+
+  <div id="sortingHat" class="sorting-hat">
+
+    <button class="sorting-hat__button">Get sorted</button>
+
+    <div class="sorting-hat__gryffindor d-none">
+      <img src="https://i.chzbgr.com/full/7000747520/hE82C0116/">
+    </div>
+
+    <div class="sorting-hat__hufflepuff d-none">
+      <img src="https://static2.srcdn.com/wordpress/wp-content/uploads/2019/09/iAnKd6y.jpg?q=50&fit=crop&w=738&h=623">
+    </div>
+
+    <div class="sorting-hat__ravenclaw d-none">
+      <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2019/08/harry-ravenclaw-meme.jpg?q=50&fit=crop&w=738&h=568">
+    </div>
+
+    <div class="sorting-hat__slytherin d-none">
+      <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2018/04/Man-Orange-Cone-Sorting-Hat-meme.png?q=50&fit=crop&w=738&h=900">
+    </div>
+
+  </div>
+
+  <script type="module" src="./javascripts/characters.js"></script>
+  <script type="module" src="./javascripts/sortingHat.js"></script>
+  <script type="module" src="./javascripts/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.5.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.5.0/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>

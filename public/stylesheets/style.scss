@@ -1,0 +1,113 @@
+@import 'variables.scss';
+
+.background-positioning {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+html {
+    scroll-behavior: smooth;
+    body {
+        background-color: #140b0a;
+        font-family: 'Red Hat Display', sans-serif;
+    }
+}
+
+body::-webkit-scrollbar{
+        width: 0 !important;
+}
+
+h1 {
+    color: white;
+    font-family: 'Gilda Display', serif;
+}
+
+.starting-page {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/harry-potter-wallpaper-background-For-Free-Wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__logo {
+        top: 50%;
+        left: 50%;
+        width: 480px;
+        img {
+            max-width:100%;
+        }
+    }
+}
+
+.menu {
+    top: 0;
+    width: 100%;
+    padding-bottom: -60px !important;
+    position: fixed;
+    &-item {
+        a {
+            color: white;
+            &:hover {
+                color: beige;
+            }
+        }
+    }
+}
+
+.house-button {
+    margin: 30px;
+    width:25%;
+    height: 240px;
+    &__gryffindor {
+        background: url(../images/gryffindor_crest.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    } 
+    &__hufflepuff {
+        background: url(../images/hufflepuff_crest.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__ravenclaw {
+        background: url(../images/ravenclaw_crest.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__slytherin {
+        background: url(../images/slytherin_crest.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.characters-list__gryffindor {
+    background-image: url(../images/gryffindor_pattern.jpg);
+    background-repeat: repeat;
+}
+
+.active {
+    display: flex;
+}
+
+.sorting-hat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__button {
+        padding: 15px 25px;
+        border-radius: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        &:hover {
+            color: white;
+            background-color: grey;
+        }
+    }
+}
+
+
