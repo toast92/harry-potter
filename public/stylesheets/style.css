@@ -31,9 +31,10 @@ h1 {
 
 .menu {
   top: 0;
+  z-index: 10;
   width: 100%;
-  padding-bottom: -60px !important;
-  position: fixed; }
+  position: fixed;
+  background-color: #140b0a; }
   .menu-item a {
     color: white; }
     .menu-item a:hover {
@@ -42,16 +43,14 @@ h1 {
 .carousel-wrapper {
   overflow: hidden;
   width: 90%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .carousel-wrapper * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .bookList-carousel {
   transform-style: preserve-3d;
-}
+  margin: 4rem; }
 
 .book {
   color: white;
@@ -60,45 +59,41 @@ h1 {
   align-items: center;
   opacity: 0;
   position: absolute;
-  top:0;
+  top: 0;
   width: 100%;
-  margin: auto;
-  padding: 1rem 4rem;
   z-index: 100;
-  transition: transform .5s, opacity .5s, z-index .5s;
-}
+  transition: transform .5s, opacity .5s, z-index .5s; }
 
 .book.initial,
 .book.active {
   opacity: 1;
   position: relative;
-  z-index: 900;
-}
+  z-index: 900; }
 
 .book.prev,
 .book.next {
-  z-index: 800;
-}
+  z-index: 800; }
 
 .carousel__button--prev,
 .carousel__button--next {
   position: absolute;
-  top:50%;
+  top: 50%;
   width: 3rem;
   height: 3rem;
   background-color: #FFF;
   transform: translateY(-50%);
   border-radius: 50%;
-  cursor: pointer; 
-  z-index: 1001; /* Sit on top of everything */
-  border: 1px solid black;
-}
+  cursor: pointer;
+  z-index: 1001;
+  /* Sit on top of everything */
+  border: 1px solid black; }
+
 .carousel__button--prev {
-  left:0;
-}
+  left: 0; }
+
 .carousel__button--next {
-  right:0;
-}
+  right: 0; }
+
 .carousel__button--prev::after,
 .carousel__button--next::after {
   content: " ";
@@ -109,45 +104,35 @@ h1 {
   left: 54%;
   border-right: 2px solid black;
   border-bottom: 2px solid black;
-  transform: translate(-50%, -50%) rotate(135deg);
-}
+  transform: translate(-50%, -50%) rotate(135deg); }
+
 .carousel__button--next::after {
   left: 47%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
+  transform: translate(-50%, -50%) rotate(-45deg); }
 
 .book__title {
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .book-content {
   display: flex;
-  align-items: center;
-}
+  align-items: center; }
 
 .book-content__image {
   height: 500px;
   width: auto;
-  margin: 50px;
-}
+  margin: 50px; }
 
 .book-content__image img {
-  max-height: 100%;
-}
+  max-height: 100%; }
 
 .book-content__summary {
   margin: 50px;
   max-width: 500px;
   font-size: 1.2rem;
-  line-height: 1.65;
-}
+  line-height: 1.65; }
 
 .characters-page {
-  padding-top: 100px;
-}
-
-.characters-page {
-  padding-top: 100px; }
+  padding: 4rem; }
 
 .house-button {
   margin: 30px;

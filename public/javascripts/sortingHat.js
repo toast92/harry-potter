@@ -22,4 +22,6 @@ const handleSorting = (house) => {
 
 getHouses().then(data => handleSorting(data));
 
+export default handleSorting;
+
 

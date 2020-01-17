@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bookList.append(bookDiv);
     }
 
-    // Just reading the functrion name; what will it do?
+    // Just reading the function name; what will it do?
     const generateBooks = () => {
         bookCollection.forEach(book => {
             createBookDiv(book);
@@ -46,20 +46,35 @@ document.addEventListener("DOMContentLoaded", () => {
         carouselElementsArray = Array.from(document.querySelectorAll(".book"));
     }
 
-
-
-
-
-
     const nextBook = () => {
         const activeElement = document.querySelector('.active');
         const currentIndex = carouselElementsArray.indexOf(activeElement);
+        let carouselLength = carouselElementsArray.length - 1;
         let targetElement;
+        let nextBook = currentIndex + 1;
+        let previousBook = currentIndex - 1;
 
-        if(currentIndex === carouselElementsArray.length - 1) {
+        if(currentIndex === carouselLength) {
             targetElement = 0;
         } else {
-            targetElement = currentIndex + 1;
+            targetElement = nextBook;
+        }
+
+        updateActiveClasses(currentIndex, targetElement);
+    }
+
+    const previousBook = () => {
+        const activeElement = document.querySelector('.active');
+        const currentIndex = carouselElementsArray.indexOf(activeElement);
+        let targetElement;
+        let carouselLength = carouselElementsArray.length - 1;
+        let nextBook = currentIndex + 1;
+        let previousBook = currentIndex - 1;
+
+        if(currentIndex === 0) {
+            targetElement = carouselLength;
+        } else {
+            targetElement = previousBook;
         }
 
         updateActiveClasses(currentIndex, targetElement);
@@ -75,6 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     nextButton.addEventListener('click', () => {
         nextBook();
+    });
+
+    prevButton.addEventListener('click', () => {
+        previousBook();
     });
 
     fillBooksArray();
