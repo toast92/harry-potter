@@ -12,7 +12,8 @@
     "prod": "NODE_ENV=production npm-run-all clean build server:prod",
     "watch": "npm run sass & npm run watch-code",
     "watch-code": "nodemon",
-    "sass": "node-sass --watch ./public/stylesheets/style.scss -o ./public/stylesheets"
+    "sass": "node-sass --watch ./public/stylesheets/style.scss -o ./public/stylesheets",
+    "test": "jest"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -31,6 +32,14 @@
     "@babel/core": "^7.6.2",
     "@babel/node": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
+    "jest": "^24.9.0",
+    "jest-fetch-mock": "^3.0.1",
     "nodemon": "^1.19.3"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "/Users/inicula/Documents/harry-potter/harry-potter/setupJest.js"
+    ]
   }
 }
